@@ -2,7 +2,7 @@
 
 Sito statico ospitato su GitHub Pages: il QR Code sui tavoli apre il menù in PDF.
 
-- **URL pubblico (codificato nel QR Code):** https://mickj90.github.io/menu-il-solito-posto/
+- **URL pubblico (codificato nel QR Code):** https://ilsolitoposto.github.io/menu-il-solito-posto/
 - Il QR punta alla pagina `index.html`, non direttamente al PDF. La pagina reindirizza subito a `menu.pdf` e mostra un link manuale se il reindirizzamento non parte.
 
 ## File
@@ -43,13 +43,13 @@ Il QR Code non va rigenerato quando cambia il menù. Serve solo se cambia l'URL 
 
 ```bash
 py -m pip install segno
-py -m segno.cli --error Q --border 4 --scale 10 --no-size --dark "#000000" --light "#ffffff" --title "Menù Il Solito Posto" --output qr-code.svg "https://mickj90.github.io/menu-il-solito-posto/"
-py -m segno.cli --error Q --border 4 --scale 40 --dpi 300 --dark "#000000" --light "#ffffff" --output qr-code.png "https://mickj90.github.io/menu-il-solito-posto/"
+py -m segno.cli --error Q --border 4 --scale 10 --no-size --dark "#000000" --light "#ffffff" --title "Menù Il Solito Posto" --output qr-code.svg "https://ilsolitoposto.github.io/menu-il-solito-posto/"
+py -m segno.cli --error Q --border 4 --scale 40 --dpi 300 --dark "#000000" --light "#ffffff" --output qr-code.png "https://ilsolitoposto.github.io/menu-il-solito-posto/"
 ```
 
 ## Da non fare
 
-- Non rinominare il repository e non cambiare username GitHub: l'URL del QR Code smetterebbe di funzionare.
+- Non rinominare il repository e non rinominare né eliminare l'organizzazione `ilsolitoposto`: l'URL del QR Code smetterebbe di funzionare.
 - Non rinominare `index.html` e non spostarlo in una sottocartella.
 - Non rendere privato il repository: GitHub Pages gratuito funziona solo su repository pubblici.
 - Non caricare file riservati: tutto il contenuto del repository è pubblico.
