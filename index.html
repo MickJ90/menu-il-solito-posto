@@ -4,7 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Menù · Il Solito Posto</title>
-<script>location.replace("menu.pdf");</script>
+<script>
+var navigationEntry = performance.getEntriesByType && performance.getEntriesByType("navigation")[0];
+if (!navigationEntry || navigationEntry.type !== "back_forward") location.replace("menu.pdf");
+</script>
 <noscript><meta http-equiv="refresh" content="0; url=menu.pdf"></noscript>
 <style>
 :root { color-scheme: light dark; --text: #1c1917; --muted: #57534e; --bg: #fafaf9; --accent: #7c2d12; --accent-text: #fff; }
@@ -21,7 +24,7 @@ a.secondary { color: var(--accent); font-weight: 600; }
 <body>
 <main>
 <h1>Il Solito Posto</h1>
-<p>Stiamo aprendo il menù. Se non si apre da solo, tocca il pulsante qui sotto.</p>
+<p>Il menù si apre da solo. Se non succede, tocca il pulsante qui sotto.</p>
 <a class="button" href="menu.pdf">Apri il menù</a>
 <a class="secondary" href="menu.pdf" download="menu-il-solito-posto.pdf">Scarica il PDF</a>
 </main>
